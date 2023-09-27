@@ -1,0 +1,14 @@
+func miniMaxSum(arr: [Int]) -> Void {
+    var array = arr
+    var sortedArr = array.sorted()
+    var minSum = 0
+    var maxSum = 0
+    for i in 0..<sortedArr.count - 1 {
+        minSum += sortedArr[i]
+    }
+    for i in 1...sortedArr.count - 1 {
+        maxSum += sortedArr[i]
+    }
+    
+    print(minSum, maxSum)
+}
