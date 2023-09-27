@@ -1,0 +1,9 @@
+func staircase(n: Int) -> Void {
+    for i in 1...n {
+        var spaces = String(repeating: " ", count: n - i)
+        var hashtags = String(repeating: "#", count: i)
+        var lines = spaces + hashtags
+        
+        print(lines)
+    }   
+}
