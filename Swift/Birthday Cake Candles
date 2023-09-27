@@ -1,0 +1,20 @@
+func birthdayCakeCandles(candles: [Int]) -> Int {
+    var dict = [Int: Int]()
+    
+    for i in candles {
+        if let count = dict[i] {
+            dict[i] = count + 1
+        }
+        else {
+            dict[i] = 1
+        }
+    }
+    
+    var max = 0
+    for value in dict.values {
+        if value > max {
+            max = value
+        }
+    }
+    return max
+}
