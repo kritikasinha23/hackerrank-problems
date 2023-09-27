@@ -1,0 +1,10 @@
+func diagonalDifference(arr: [[Int]]) -> Int {
+    var primaryDiagonal = 0
+    var secDiagonal = 0
+    
+    for i in 0...arr.count - 1 {
+        primaryDiagonal += arr[i][i]
+        secDiagonal += arr[i][arr.count - i - 1]
+    }
+    return abs(primaryDiagonal - secDiagonal)
+}
