@@ -1,0 +1,37 @@
+import Foundation
+
+/*
+ * Complete the 'countApplesAndOranges' function below.
+ *
+ * The function accepts following parameters:
+ *  1. INTEGER s
+ *  2. INTEGER t
+ *  3. INTEGER a
+ *  4. INTEGER b
+ *  5. INTEGER_ARRAY apples
+ *  6. INTEGER_ARRAY oranges
+ */
+
+func countApplesAndOranges(s: Int, t: Int, a: Int, b: Int, apples: [Int], oranges: [Int]) -> Void {
+    // Write your code here
+    let numRange = s...t
+    var appleCount = 0
+    var orangeCount = 0
+    
+    for apple in apples {
+        let cal = apple + a
+         if numRange.contains(cal) {
+            appleCount += 1
+        }
+    }
+    for orange in oranges {
+        let cal = orange + b
+        if numRange.contains(cal) {
+            orangeCount += 1
+        }
+    }
+    
+    print(appleCount)
+    print(orangeCount)
+
+}
