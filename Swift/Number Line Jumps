@@ -1,0 +1,37 @@
+import Foundation
+
+/*
+ * Complete the 'kangaroo' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts following parameters:
+ *  1. INTEGER x1
+ *  2. INTEGER v1
+ *  3. INTEGER x2
+ *  4. INTEGER v2
+ */
+
+func kangaroo(x1: Int, v1: Int, x2: Int, v2: Int) -> String {
+    // Write your code here
+    if v2 >= v1 {
+        return "NO"
+    }
+    
+    var jumps = 0
+    var d1 = x1 + jumps * v1
+    var d2 = x2 + jumps * v2
+    
+    while d1 < d2 {
+        jumps += 1
+        d1 = x1 + jumps * v1
+        d2 = x2 + jumps * v2
+    }
+    
+    if d1 == d2 {
+        return "YES"
+    }
+    else {
+        return "NO"
+    }
+
+}
