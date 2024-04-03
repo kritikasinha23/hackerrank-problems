@@ -1,0 +1,22 @@
+func gradingStudents(grades: [Int]) -> [Int] {
+    // Write your code here
+    var gradeArray = [Int]()
+    
+    for grade in grades {
+        if grade < 38 {
+            gradeArray.append(grade)
+        }
+        else {
+            let diff = 5 - (grade % 5)
+            
+            if diff < 3 {
+                let sum = grade + diff
+                gradeArray.append(sum)
+            }
+            else {
+                gradeArray.append(grade)
+            }
+        }
+    }
+    return gradeArray
+}
