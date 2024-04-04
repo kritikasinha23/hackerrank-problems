@@ -1,0 +1,29 @@
+import Foundation
+
+/*
+ * Complete the 'breakingRecords' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY scores as parameter.
+ */
+
+func breakingRecords(scores: [Int]) -> [Int] {
+    // Write your code here
+    var max = 0
+    var min = 0
+    var max_score = scores[0]
+    var min_score = scores[0]
+    
+    for i in 0...scores.count - 1 {
+        if scores[i] > max_score {
+            max += 1
+            max_score = scores[i]
+        }
+        else if scores[i] < min_score {
+            min += 1
+            min_score = scores[i]
+        }
+    }
+    return [max, min]
+
+}
